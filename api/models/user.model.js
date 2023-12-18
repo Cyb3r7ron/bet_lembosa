@@ -15,7 +15,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-},{timestamps:true});
+    avatar: {
+     type: String,
+     default:"https://cdn3.iconfinder.com/data/icons/diversity-avatars-vol-2/64/afro-african-man-glasses-512.png"
+    },
+    // stopped at 3:23:04
+},
+{ timestamps:true });
 
 const User = mongoose.model('User', userSchema);
 
